@@ -5,6 +5,6 @@ import { authMiddleware } from "../Middlewares/jwt.middleware.js";
 const Router = express.Router();
 
 Router.post("/sendFriendRequest", authMiddleware, sendFriendRequest);
-Router.post("/acceptFriendRequest", authMiddleware, acceptFriendRequest);
+Router.update("/acceptFriendRequest", authMiddleware, acceptFriendRequest);
 
 export default Router;

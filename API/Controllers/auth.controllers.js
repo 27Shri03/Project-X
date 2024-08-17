@@ -22,7 +22,8 @@ export const signUp = async (req, res) => {
             username,
             email,
             password: hashedPassword,
-            friends: []
+            friends: [],
+            friendRequests: []
         })
         await newUser.save();
         const token = jwt.sign(
@@ -58,7 +59,7 @@ export const logIn = async (req, res) => {
         const query = email ? { email: email } : { username: username };
         const oldUser = await User.findOne(query)
             .populate('friends', 'username photo')
-            .populate('friendRequests', 'username photo');
+            .populate('friendRequests.user', 'username photo');
         if (!oldUser) {
             return res.status(404).json({ message: "User not found please signUp first" });
         }
@@ -70,7 +71,13 @@ export const logIn = async (req, res) => {
             username: oldUser.username,
             userId: oldUser._id,
             friends: oldUser.friends,
-            friendRequests: oldUser.friendRequests
+            friendRequests: oldUser.friendRequests.map(request => ({
+                user: {
+                    username: request.user.username,
+                    photo: request.user.photo
+                },
+                createdAt: request.createdAt
+            }))
         }
 
         const token = jwt.sign(

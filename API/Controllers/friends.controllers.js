@@ -19,13 +19,16 @@ export const sendFriendRequest = async (req, res) => {
         if (receiverUser.friends.includes(userId)) { // if user is already your friend
             return res.status(404).json({ message: `${username} is already your friend` });
         }
-        receiverUser.friendRequests.push(userId);
+        receiverUser.friendRequests.push({ user: userId });
         await receiverUser.save();
         const payload = {
-            timestamp : receiverUser.updatedAt,
-            username : req.user.username,
+            user: {
+                username: req.user.username,
+                photo: null
+            },
+            createdAt: receiverUser.updatedAt
         }
-        emitToUser(receiverUser._id , EVENTS.RECEIVEFRIENDREQUEST , payload);        
+        emitToUser(receiverUser._id.toString(), EVENTS.RECEIVEFRIENDREQUEST, payload);
 
     } catch (error) {
         return res.status(500).json({ message: "Internal Server Error", error: error.message });
@@ -33,6 +36,36 @@ export const sendFriendRequest = async (req, res) => {
     }
 }
 
-export const acceptFriendRequest = async(req,res) =>{
-    
+export const acceptFriendRequest = async (req, res) => {
+    const { username } = req.body;
+    const { userId } = req.user;
+    try {
+        const myinfo = await User.findById(userId).populate('friendRequests.user', 'username');
+        // if the user itself is not registered in db
+        if (!myinfo) {
+            return res.status(404).json({ message: `${req.user.username} not found in database` });
+        }
+        const friendRequest = myinfo.friendRequests.find((request) => request.user.username === username);
+        // if the friendRequest is not present
+        if (!friendRequest) {
+            return res.status(404).json({ message: "Friend request is not valid" });
+        }
+        const otherUser = await User.findOne({ username: username });
+        // if the friend is not registered in db
+        if (!otherUser) {
+            return res.status(404).json({ message: "Friend User not found" });
+        }
+        otherUser.friends.push(myinfo._id);
+        myinfo.friends.push(otherUser._id);
+
+        // filtering the friendRequests as is is now accepted
+        currentUser.friendRequests = currentUser.friendRequests.filter(
+            request => request.user.username !== username
+        );
+        await Promise.all([currentUser.save(), friendUser.save()]);
+        return res.status(200).json({ message: "Friend Request accepted Successfully" });
+
+    } catch (error) {
+        return res.status(500).json({ message: "Internal server error", error: error.message });
+    }
 }
