@@ -26,15 +26,21 @@ export const signUp = async (req, res) => {
         })
         await newUser.save();
         const token = jwt.sign(
-            { userId: newUser._id },
+            { userId: newUser._id, username: newUser.username },
             JWT_SECRET,
             { expiresIn: '1d' }
         )
+        const userData = {
+            username: newUser.username,
+            userId: newUser._id,
+            friends: [],
+            friendRequests: []
+        }
 
         return res.status(201).json({
             message: "User created successfully",
-            userId: newUser._id,
-            token: token
+            token: token,
+            userData: userData
         });
     } catch (error) {
         return res.status(500).json({ message: "Internal server error", error: error.message })
@@ -43,11 +49,16 @@ export const signUp = async (req, res) => {
 
 export const logIn = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        if (!email || !password) {
-            return res.status(400).json({ message: "Email and password are required" })
+        const { email, password, username } = req.body;
+        const entity = email || username; // Use email if provided, otherwise use username
+
+        if (!entity || !password) {
+            return res.status(400).json({ message: "Email or username and password are required" });
         }
-        const oldUser = await User.findOne({ email: email });
+        const query = email ? { email: email } : { username: username };
+        const oldUser = await User.findOne(query)
+            .populate('friends', 'username photo')
+            .populate('friendRequests', 'username photo');
         if (!oldUser) {
             return res.status(404).json({ message: "User not found please signUp first" });
         }
@@ -55,16 +66,22 @@ export const logIn = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: "Invalid Credentials" });
         }
+        const userData = {
+            username: oldUser.username,
+            userId: oldUser._id,
+            friends: oldUser.friends,
+            friendRequests: oldUser.friendRequests
+        }
 
         const token = jwt.sign(
-            { userId: oldUser._id },
+            { userId: oldUser._id, username: oldUser.username },
             JWT_SECRET,
             { expiresIn: '1d' }
         )
         return res.status(200).json({
-            message: "Login successfull",
-            userId: oldUser._id,
-            token: token
+            message: "Login successfully",
+            token: token,
+            userData: userData
         });
 
     } catch (error) {

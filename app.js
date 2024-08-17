@@ -1,10 +1,11 @@
 import express from "express";
 import cors from "cors";
-import connectDB from "./config/databaseConnection.js";
+import connectDB from "./config/databaseConnection.config.js";
 import setupSwagger from "./swaggerConfig.js";
 import dotenv from "dotenv";
 import authRoutes from "./API/Routes/auth.routes.js";
-import userRoutes from "./API/Routes/user.routes.js";
+import friendsRoutes from "./API/Routes/friends.routes.js";
+import morganMiddleware from "./API/Middlewares/morgan.middleware.js";
 
 dotenv.config();
 
@@ -17,10 +18,11 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(morganMiddleware);
 
 //Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/user', userRoutes);
+app.use('/api/user', friendsRoutes);
 
 // Setup Swagger
 setupSwagger(app);
