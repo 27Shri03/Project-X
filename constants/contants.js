@@ -1,3 +1,6 @@
 export const EVENTS = {
-    RECEIVEFRIENDREQUEST : "receiveFriendRequest"
+    RECEIVEFRIENDREQUEST: "receiveFriendRequest",
+    ACCEPTEDFRIENDREQUEST : "acceptedFriendRequest",
+    SUCCESS: "success",
+    ERROR: "error"
 } 

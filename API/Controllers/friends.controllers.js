@@ -13,8 +13,8 @@ export const sendFriendRequest = async (req, res) => {
         if (!receiverUser) { // receiver user is not registered
             return res.status(404).json({ message: `User with username : ${username} is not present in our database` });
         }
-        if (receiverUser.friendRequests.includes(userId)) { // if you already have send the friendRequest
-            return res.status(404).json({ message: `You already have send request to this ${username} ` });
+        if (receiverUser.friendRequests.some((request) => request.user.toString() === userId)) { // if you already have send the friendRequest
+            return res.status(404).json({ message: `You already have send this request to ${username} ` });
         }
         if (receiverUser.friends.includes(userId)) { // if user is already your friend
             return res.status(404).json({ message: `${username} is already your friend` });
@@ -29,6 +29,7 @@ export const sendFriendRequest = async (req, res) => {
             createdAt: receiverUser.updatedAt
         }
         emitToUser(receiverUser._id.toString(), EVENTS.RECEIVEFRIENDREQUEST, payload);
+        return res.status(200).json({ message: `Request sent to ${username} successfully` });
 
     } catch (error) {
         return res.status(500).json({ message: "Internal Server Error", error: error.message });
@@ -59,10 +60,15 @@ export const acceptFriendRequest = async (req, res) => {
         myinfo.friends.push(otherUser._id);
 
         // filtering the friendRequests as is is now accepted
-        currentUser.friendRequests = currentUser.friendRequests.filter(
+        myinfo.friendRequests = myinfo.friendRequests.filter(
             request => request.user.username !== username
         );
-        await Promise.all([currentUser.save(), friendUser.save()]);
+        await Promise.all([myinfo.save(), otherUser.save()]);
+        const payload = {
+            username: myinfo.username,
+            photo: myinfo.photo
+        }
+        emitToUser(otherUser._id.toString(), EVENTS.ACCEPTEDFRIENDREQUEST, payload);
         return res.status(200).json({ message: "Friend Request accepted Successfully" });
 
     } catch (error) {

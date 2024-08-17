@@ -22,7 +22,7 @@ app.use(morganMiddleware);
 
 //Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/user', friendsRoutes);
+app.use('/api/friends', friendsRoutes);
 
 // Setup Swagger
 setupSwagger(app);

@@ -1,0 +1,62 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"404\",\"responseTime\":\"14.933\"}","timestamp":"2024-08-17T20:36:08.069Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"116.358\"}","timestamp":"2024-08-17T20:37:03.742Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"404\",\"responseTime\":\"9.162\"}","timestamp":"2024-08-17T20:37:26.860Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"87.595\"}","timestamp":"2024-08-17T20:37:34.013Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T20:45:58.441Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"108.511\"}","timestamp":"2024-08-17T20:52:23.027Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T20:53:08.043Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T20:53:27.785Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"-\",\"responseTime\":\"-\"}","timestamp":"2024-08-17T20:54:21.436Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T20:55:00.849Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"-\",\"responseTime\":\"-\"}","timestamp":"2024-08-17T20:55:23.523Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T20:55:51.754Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T20:55:54.035Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T20:56:34.063Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"45.699\"}","timestamp":"2024-08-17T20:56:34.066Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T20:56:38.257Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"29.794\"}","timestamp":"2024-08-17T20:56:38.259Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T20:58:32.428Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T20:58:33.890Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T20:58:37.135Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"51.421\"}","timestamp":"2024-08-17T20:58:37.139Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T20:58:38.966Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"46.575\"}","timestamp":"2024-08-17T20:58:38.967Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T21:02:31.677Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T21:02:33.353Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T21:02:40.708Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"49.210\"}","timestamp":"2024-08-17T21:02:40.713Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"34.466\"}","timestamp":"2024-08-17T21:02:43.161Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/login\",\"status\":\"200\",\"responseTime\":\"101.514\"}","timestamp":"2024-08-17T21:04:39.601Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/acceptFriendRequest\",\"status\":\"500\",\"responseTime\":\"35.329\"}","timestamp":"2024-08-17T21:05:06.973Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T21:06:19.279Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T21:06:20.723Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/acceptFriendRequest\",\"status\":\"500\",\"responseTime\":\"52.936\"}","timestamp":"2024-08-17T21:06:26.481Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T21:06:59.712Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T21:07:01.179Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/acceptFriendRequest\",\"status\":\"404\",\"responseTime\":\"44.151\"}","timestamp":"2024-08-17T21:07:05.584Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"10.656\"}","timestamp":"2024-08-17T21:07:40.204Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T21:08:41.982Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"39.472\"}","timestamp":"2024-08-17T21:08:41.984Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"10.951\"}","timestamp":"2024-08-17T21:08:44.048Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"137.728\"}","timestamp":"2024-08-17T21:08:50.041Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"92.950\"}","timestamp":"2024-08-17T21:11:05.039Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-17T21:17:37.368Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T21:17:39.047Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"103.423\"}","timestamp":"2024-08-17T21:18:41.171Z"}
+{"level":"\u001b[33mwarn\u001b[39m","message":"66c113b1b8db670fa6992e0d not found for event receiveFriendRequest","timestamp":"2024-08-17T21:19:16.014Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"29.460\"}","timestamp":"2024-08-17T21:19:16.016Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-17T21:19:27.070Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-17T21:19:54.383Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T21:20:03.473Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"29.040\"}","timestamp":"2024-08-17T21:20:03.474Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"11.294\"}","timestamp":"2024-08-17T21:20:05.209Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"acceptedFriendRequest sent successfully to Shri123","timestamp":"2024-08-17T21:20:25.053Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"150.897\"}","timestamp":"2024-08-17T21:20:25.054Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-17T21:22:28.576Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"27.388\"}","timestamp":"2024-08-17T21:22:28.577Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"11.904\"}","timestamp":"2024-08-17T21:22:30.055Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"acceptedFriendRequest sent successfully to Shri123","timestamp":"2024-08-17T21:22:36.506Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/friends/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"50.697\"}","timestamp":"2024-08-17T21:22:36.507Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"78.754\"}","timestamp":"2024-08-17T21:22:48.567Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-17T21:23:47.331Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-17T21:23:52.780Z"}

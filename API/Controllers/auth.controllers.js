@@ -70,7 +70,10 @@ export const logIn = async (req, res) => {
         const userData = {
             username: oldUser.username,
             userId: oldUser._id,
-            friends: oldUser.friends,
+            friends: oldUser.friends.map((friend) => ({
+                username: friend.username,
+                photo: friend.photo
+            })),
             friendRequests: oldUser.friendRequests.map(request => ({
                 user: {
                     username: request.user.username,
