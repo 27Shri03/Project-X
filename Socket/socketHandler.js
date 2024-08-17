@@ -1,4 +1,3 @@
-
 let connectedSockets = [];
 
 const setupSocketHandlers = (io) => {
