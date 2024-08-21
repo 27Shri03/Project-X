@@ -5,6 +5,7 @@ import setupSwagger from "./swaggerConfig.js";
 import dotenv from "dotenv";
 import authRoutes from "./API/Routes/auth.routes.js";
 import friendsRoutes from "./API/Routes/friends.routes.js";
+import chatRoutes from "./API/Routes/chat.routes.js";
 import morganMiddleware from "./API/Middlewares/morgan.middleware.js";
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(morganMiddleware);
 //Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/friends', friendsRoutes);
+app.use('/api/chat', chatRoutes)
 
 // Setup Swagger
 setupSwagger(app);

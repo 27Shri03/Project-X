@@ -66,7 +66,8 @@ export const acceptFriendRequest = async (req, res) => {
         await Promise.all([myinfo.save(), otherUser.save()]);
         const payload = {
             username: myinfo.username,
-            photo: myinfo.photo
+            photo: myinfo.photo,
+            UID: myinfo._id
         }
         emitToUser(otherUser._id.toString(), EVENTS.ACCEPTEDFRIENDREQUEST, payload);
         return res.status(200).json({ message: "Friend Request accepted Successfully" });

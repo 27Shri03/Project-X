@@ -1,4 +1,3 @@
-// We can use Map also rather than a normal array for faster retrival.
 import { io } from "../server.js";
 import logger from "../config/winston.config.js";
 import { EVENTS } from "../constants/contants.js";
@@ -19,7 +18,6 @@ const handleNewConnection = (socket) => {
         socket.emit("error", { error: error.message });
         logger.error(error.message);
     }
-
 };
 
 const handleDisconnect = (socket) => {
@@ -37,6 +35,7 @@ const handleDisconnect = (socket) => {
 }
 const emitToUser = (userId, event, payload) => {
     const userInfo = connectedSockets.get(userId);
+    console.log(connectedSockets);
     if (userInfo) {
         io.to(userInfo.socketId).emit(event, payload);
         logger.info(`${event} sent successfully to ${userInfo.username}`);
