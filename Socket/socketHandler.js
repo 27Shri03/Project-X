@@ -1,8 +1,38 @@
 import { io } from "../server.js";
 import logger from "../config/winston.config.js";
 import { EVENTS } from "../constants/contants.js";
+import { Conversation } from "../Models/conversation.model.js";
 
 const connectedSockets = new Map();
+
+const sendMessage = async (socket, payload) => {
+    const { conversationId, message } = payload;
+    const convo = await Conversation.findById(conversationId);
+    if (!convo) {
+        res.status(404).json({ message: `${conversationId} is not a valid Conversation ID` });
+    }
+    convo.messages.push(message);
+    await convo.save();
+    socket.to(conversationId).emit(EVENTS.RECEIVEMESSAGE, message);
+}
+
+const handleJoinRoom = async (socket, payload) => {
+    try {
+        const convo = await Conversation.findById(payload.conversationId);
+        if (!convo) {
+            socket.emit("error", { error: `${payload.conversationId} is not a valid Conversation ID` });
+            logger.error("No conversation found while joining Room");
+            return;
+        }
+        socket.join(payload.conversationId);
+        socket.emit(EVENTS.SUCCESS, { message: `${payload.username} joined the room` });
+        logger.info(`${payload.username} joined the room`)
+
+    } catch (error) {
+        socket.emit(EVENTS.ERROR, { error: error.message });
+        logger.error("Error in JoinRoom : ", error.message);
+    }
+}
 
 const handleNewConnection = (socket) => {
     try {
@@ -13,10 +43,10 @@ const handleNewConnection = (socket) => {
             username: username
         });
         logger.info(`${username} joined the socket!`);
-        socket.emit("success", { message: `${username} is connected to sockets` });
+        socket.emit(EVENTS.SUCCESS, { message: `${username} is connected to sockets` });
     } catch (error) {
-        socket.emit("error", { error: error.message });
-        logger.error(error.message);
+        socket.emit(EVENTS.ERROR, { error: error.message });
+        logger.error("Error in Socket Disconnection : ", error.message);
     }
 };
 
@@ -48,6 +78,8 @@ const emitToUser = (userId, event, payload) => {
 const setupSocketHandlers = (io) => {
     io.on("connection", (socket) => {
         handleNewConnection(socket, io);
+        socket.on("sendMessage", (payload) => sendMessage(socket, payload));
+        socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
         socket.on("disconnect", () => handleDisconnect(socket));
     });
 };

@@ -1,4 +1,7 @@
 import { Conversation } from "../../Models/conversation.model.js";
+import { emitToUser } from "../../Socket/socketHandler.js";
+import logger from "../../config/winston.config.js";
+import { EVENTS } from "../../constants/contants.js";
 
 export const getMessages = async (req, res) => {
     try {
@@ -25,8 +28,6 @@ export const getMessages = async (req, res) => {
 
         res.status(200).json({
             messages,
-            page,
-            limit,
             totalMessages,
             hasMore,
             conversationId: conversation._id
