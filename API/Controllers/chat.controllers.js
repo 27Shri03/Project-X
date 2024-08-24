@@ -1,7 +1,4 @@
 import { Conversation } from "../../Models/conversation.model.js";
-import { emitToUser } from "../../Socket/socketHandler.js";
-import logger from "../../config/winston.config.js";
-import { EVENTS } from "../../constants/contants.js";
 
 export const getMessages = async (req, res) => {
     try {

@@ -6,16 +6,36 @@ import { Conversation } from "../Models/conversation.model.js";
 const connectedSockets = new Map();
 
 const sendMessage = async (socket, payload) => {
-    const { conversationId, message } = payload;
-    const convo = await Conversation.findById(conversationId);
-    if (!convo) {
-        res.status(404).json({ message: `${conversationId} is not a valid Conversation ID` });
+    try {
+        const { message, friendId } = payload;
+        if (!message || !friendId) {
+            socket.emit(EVENTS.ERROR, { message: "message and friendId required in payload" });
+            return;
+        }
+        let convo = await Conversation.findOne({ participants: [message.senderId, friendId] });
+        if (!convo) {
+            convo = new Conversation({
+                participants: [message.senderId, friendId],
+                messages: [],
+            })
+        }
+        convo.messages.push(message);
+        await convo.save();
+        const addresstoSend = connectedSockets.get(friendId);
+        if (!addresstoSend) {
+            socket.emit(EVENTS.SUCCESS, { message: "Friend is not online message saved in database" });
+            return;
+        }
+        socket.to(addresstoSend.socketId).emit(EVENTS.RECEIVEMESSAGE, message);
+        socket.emit(EVENTS.SUCCESS, { message: `Message send to your ID : ${friendId} successfully` })
+        logger.info("Message Sent successfully");
+    } catch (error) {
+        socket.emit(EVENTS.ERROR, { error: error.message });
+        logger.error("Error in SendMessage : ", error.message);
     }
-    convo.messages.push(message);
-    await convo.save();
-    socket.to(conversationId).emit(EVENTS.RECEIVEMESSAGE, message);
 }
 
+// Only for group Chat
 const handleJoinRoom = async (socket, payload) => {
     try {
         const convo = await Conversation.findById(payload.conversationId);
@@ -79,7 +99,7 @@ const setupSocketHandlers = (io) => {
     io.on("connection", (socket) => {
         handleNewConnection(socket, io);
         socket.on("sendMessage", (payload) => sendMessage(socket, payload));
-        socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
+        // socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
         socket.on("disconnect", () => handleDisconnect(socket));
     });
 };

@@ -25,6 +25,7 @@ const userSchema = new mongoose.Schema({
             ref: "User"
         }
     ],
+    groupChat: [],
     friendRequests: [{
         user: {
             type: mongoose.Schema.Types.ObjectId,

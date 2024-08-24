@@ -41,3 +41,24 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the room","timestamp":"2024-08-21T15:51:06.272Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-21T15:55:24.875Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-21T15:55:27.564Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:29:42.249Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"fahad joined the socket!","timestamp":"2024-08-24T19:30:15.728Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:38:22.441Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"fahad joined the socket!","timestamp":"2024-08-24T19:38:27.817Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"Error in SendMessage : ","timestamp":"2024-08-24T19:38:35.055Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"fahad joined the socket!","timestamp":"2024-08-24T19:39:37.698Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:39:39.420Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"Error in SendMessage : ","timestamp":"2024-08-24T19:41:20.149Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:42:05.021Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"Error in SendMessage : ","timestamp":"2024-08-24T19:42:07.619Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:44:26.265Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"Error in SendMessage : ","timestamp":"2024-08-24T19:44:55.943Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:46:20.249Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"Error in SendMessage : ","timestamp":"2024-08-24T19:46:28.373Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-24T19:50:20.728Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"fahad joined the socket!","timestamp":"2024-08-24T19:50:51.152Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-24T19:50:53.746Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-24T19:51:10.759Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-24T19:51:28.037Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-24T19:51:39.819Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-24T19:51:54.786Z"}
