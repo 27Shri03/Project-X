@@ -6,12 +6,15 @@ info:
 
 servers:
   - url: https://project-x-6666.onrender.com/api
+  - url: http://localhost:5000/api
 
 tags:
   - name: Auth
     description: User Registration
   - name: Chat
     description: Messaging
+  - name: User
+    description: Routes for modifying User's data
 
 paths:
   /auth/signUp:
@@ -151,7 +154,7 @@ paths:
     get:
       summary: Retrieve chat messages
       tags:
-        - Chat 
+        - Chat
       parameters:
         - in: query
           name: limit
@@ -216,11 +219,11 @@ paths:
                     example: "Internal server error"
                   error:
                     type: string
-  /chat/sendFriendRequest:
+  /user/sendFriendRequest:
     post:
       summary: Send Friend Request
       tags:
-        - Chat
+        - User
       requestBody:
         required: true
         content:
@@ -234,7 +237,7 @@ paths:
                   type: string
                   description: Username of the friend to send request to
       responses:
-        '200':
+        "200":
           description: Friend request sent successfully
           content:
             application/json:
@@ -244,7 +247,7 @@ paths:
                   message:
                     type: string
                     example: "Request sent to aasif successfully"
-        '400':
+        "400":
           description: Bad request
           content:
             application/json:
@@ -254,7 +257,7 @@ paths:
                   message:
                     type: string
                     example: "Username is required"
-        '404':
+        "404":
           description: User not found
           content:
             application/json:
@@ -264,14 +267,14 @@ paths:
                   message:
                     type: string
                     example: "User with username : aasif is not present in our database"
-        '500':
+        "500":
           description: Internal server error
 
-  /chat/acceptFriendRequest:
+  /user/acceptFriendRequest:
     post:
       summary: Accept Friend Request
       tags:
-        - Chat
+        - User
       requestBody:
         required: true
         content:
@@ -285,7 +288,7 @@ paths:
                   type: string
                   description: Username of the person whose request to accept
       responses:
-        '200':
+        "200":
           description: Friend request accepted successfully
           content:
             application/json:
@@ -295,7 +298,7 @@ paths:
                   message:
                     type: string
                     example: "Friend Request accepted Successfully"
-        '404':
+        "404":
           description: User not found
           content:
             application/json:
@@ -305,8 +308,8 @@ paths:
                   message:
                     type: string
                     example: "username not found in database"
-        '500':
-          description: Internal server error                  
+        "500":
+          description: Internal server error
 components:
   securitySchemes:
     BearerAuth:

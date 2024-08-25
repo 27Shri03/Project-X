@@ -85,7 +85,6 @@ const handleDisconnect = (socket) => {
 }
 const emitToUser = (userId, event, payload) => {
     const userInfo = connectedSockets.get(userId);
-    console.log(connectedSockets);
     if (userInfo) {
         io.to(userInfo.socketId).emit(event, payload);
         logger.info(`${event} sent successfully to ${userInfo.username}`);
