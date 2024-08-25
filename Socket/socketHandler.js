@@ -30,7 +30,7 @@ const sendMessage = async (socket, payload) => {
         socket.emit(EVENTS.SUCCESS, { message: `Message send to your ID : ${friendId} successfully` })
         logger.info("Message Sent successfully");
     } catch (error) {
-        socket.emit(EVENTS.ERROR, { error: error.message });
+        socket.emit(EVENTS.ERROR, { message: error.message });
         logger.error("Error in SendMessage : ", error.message);
     }
 }
@@ -49,7 +49,7 @@ const handleJoinRoom = async (socket, payload) => {
         logger.info(`${payload.username} joined the room`)
 
     } catch (error) {
-        socket.emit(EVENTS.ERROR, { error: error.message });
+        socket.emit(EVENTS.ERROR, { message: error.message });
         logger.error("Error in JoinRoom : ", error.message);
     }
 }
@@ -65,7 +65,7 @@ const handleNewConnection = (socket) => {
         logger.info(`${username} joined the socket!`);
         socket.emit(EVENTS.SUCCESS, { message: `${username} is connected to sockets` });
     } catch (error) {
-        socket.emit(EVENTS.ERROR, { error: error.message });
+        socket.emit(EVENTS.ERROR, { message: error.message });
         logger.error("Error in Socket Disconnection : ", error.message);
     }
 };
