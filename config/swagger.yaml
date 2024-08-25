@@ -310,6 +310,65 @@ paths:
                     example: "username not found in database"
         "500":
           description: Internal server error
+
+  /user/uploadProfilePhoto:
+    post:
+      summary: Upload user profile photo
+      tags:
+        - User
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Successful upload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Profile photo uploaded successfully"
+                  imageUrl:
+                    type: string
+                    example: "https://example.com/images/profile123.jpg"
+        "404":
+          description: No file uploaded
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "No file uploaded try again :("
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Unauthorized access"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Internal server error"
 components:
   securitySchemes:
     BearerAuth:

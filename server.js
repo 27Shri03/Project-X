@@ -1,4 +1,5 @@
 import http from "http";
+import 'dotenv/config';
 import { Server } from "socket.io";
 import app from "./app.js";
 import { setupSocketHandlers } from "./Socket/socketHandler.js";

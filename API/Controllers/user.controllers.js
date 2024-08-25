@@ -1,6 +1,7 @@
 import { User } from "../../Models/user.model.js";
 import { emitToUser } from "../../Socket/socketHandler.js";
 import { EVENTS } from "../../constants/contants.js";
+import { uploadFile } from "../../utils/uploadFile.js";
 
 
 export const sendFriendRequest = async (req, res) => {
@@ -78,3 +79,27 @@ export const acceptFriendRequest = async (req, res) => {
     }
 }
 
+export const uploadProfilePhoto = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        if (!req.file) {
+            return res.status(404).json({ message: "No file uploaded try again :(" });
+        }
+        const imageUrl = await uploadFile(req.file.path);
+        let user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        user.photo = imageUrl
+        await user.save();
+        res.status(200).json({
+            message: "Profile photo uploaded successfully",
+            imageUrl: imageUrl
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Internal server error",
+            error: error.message
+        })
+    }
+}
