@@ -22,6 +22,8 @@ There are 2 query params which are need to be passed in order to connect:
 
 ### 1. sendMessage
 
+***Event Name** : "sendMessage"
+
 This event is used to sendMessage to another user on a one-one chat:
 
 Json body:
