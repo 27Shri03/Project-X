@@ -1,10 +1,9 @@
 import express from "express";
 import cors from "cors";
 import connectDB from "./config/databaseConnection.config.js";
-import setupSwagger from "./swaggerConfig.js";
+import setupSwagger from "./config/swagger.config.js";
 import dotenv from "dotenv";
 import authRoutes from "./API/Routes/auth.routes.js";
-import friendsRoutes from "./API/Routes/friends.routes.js";
 import chatRoutes from "./API/Routes/chat.routes.js";
 import morganMiddleware from "./API/Middlewares/morgan.middleware.js";
 
@@ -23,7 +22,6 @@ app.use(morganMiddleware);
 
 //Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/friends', friendsRoutes);
 app.use('/api/chat', chatRoutes)
 
 // Setup Swagger

@@ -1,0 +1,318 @@
+openapi: 3.0.0
+info:
+  title: Authentication API
+  version: 1.0.0
+  description: API for user authentication with JWT
+
+servers:
+  - url: https://project-x-6666.onrender.com/api
+
+tags:
+  - name: Auth
+    description: User Registration
+  - name: Chat
+    description: Messaging
+
+paths:
+  /auth/signUp:
+    post:
+      summary: User Registration
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - email
+                - password
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+      responses:
+        "201":
+          description: Successful registration
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  token:
+                    type: string
+                  userData:
+                    type: object
+                    properties:
+                      username:
+                        type: string
+                      userId:
+                        type: string
+                      friends:
+                        type: array
+                        items: # Add this block to define the items in the array
+                          type: string # Or the correct type of the array elements
+                      friendRequests:
+                        type: array
+                        items:
+                          type: string # Or the correct type of the array elements
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Internal server error
+
+  /auth/logIn:
+    post:
+      summary: User Login
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - password
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+      responses:
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  token:
+                    type: string
+                  userData:
+                    type: object
+                    properties:
+                      username:
+                        type: string
+                      userId:
+                        type: string
+                      friends:
+                        type: array
+                        items: # Add this block to define the items in the array
+                          type: string # Or the correct type of the array elements
+                      friendRequests:
+                        type: array
+                        items:
+                          type: string # Or the correct type of the array elements
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Internal server error
+
+  /chat/getMessages:
+    get:
+      summary: Retrieve chat messages
+      tags:
+        - Chat 
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          description: Number of messages per page
+        - in: query
+          name: page
+          schema:
+            type: integer
+          required: true
+          description: Page number
+        - in: query
+          name: friendId
+          schema:
+            type: string
+          required: true
+          description: ID of the friend/conversation partner
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        senderId:
+                          type: string
+                        contentType:
+                          type: string
+                        contentLink:
+                          type: string
+                          nullable: true
+                        content:
+                          type: string
+                        _id:
+                          type: string
+                        timestamp:
+                          type: string
+                          format: date-time
+                  totalMessages:
+                    type: integer
+                  hasMore:
+                    type: boolean
+                  conversationId:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
+  /chat/sendFriendRequest:
+    post:
+      summary: Send Friend Request
+      tags:
+        - Chat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+              properties:
+                username:
+                  type: string
+                  description: Username of the friend to send request to
+      responses:
+        '200':
+          description: Friend request sent successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Request sent to aasif successfully"
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Username is required"
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "User with username : aasif is not present in our database"
+        '500':
+          description: Internal server error
+
+  /chat/acceptFriendRequest:
+    post:
+      summary: Accept Friend Request
+      tags:
+        - Chat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+              properties:
+                username:
+                  type: string
+                  description: Username of the person whose request to accept
+      responses:
+        '200':
+          description: Friend request accepted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Friend Request accepted Successfully"
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "username not found in database"
+        '500':
+          description: Internal server error                  
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - BearerAuth: []
