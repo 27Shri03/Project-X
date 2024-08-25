@@ -5,7 +5,7 @@ info:
   description: Project-X is a robust and seamless communication chat application which utilizes the full potential of socketIO library.
 
 servers:
-  - url: http://localhost:5000/api
+  - url: https://project-x-6666.onrender.com/api
 
 tags:
   - name: Auth
