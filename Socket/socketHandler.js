@@ -7,27 +7,24 @@ const connectedSockets = new Map();
 
 const sendMessage = async (socket, payload) => {
     try {
-        const { message, friendId } = payload;
-        if (!message || !friendId) {
-            socket.emit(EVENTS.ERROR, { message: "message and friendId required in payload" });
+        // payload = JSON.parse(payload);
+        payload = JSON.parse(payload);
+        const { message, conversationId } = payload;
+        if (!message || !conversationId) {
+            socket.emit(EVENTS.ERROR, { message: "message and conversationId required in payload" });
+            logger.error("message and conversationId required in payload");
             return;
         }
-        let convo = await Conversation.findOne({ participants: [message.senderId, friendId] });
+        let convo = await Conversation.findById(conversationId);
         if (!convo) {
-            convo = new Conversation({
-                participants: [message.senderId, friendId],
-                messages: [],
-            })
+            socket.emit(EVENTS.ERROR, { message: "No conversation found please make the user your friend in order to start conversation" });
+            logger.warn("Wrong conversation Id in sendMessage");
+            return;
         }
         convo.messages.push(message);
         await convo.save();
-        const addresstoSend = connectedSockets.get(friendId);
-        if (!addresstoSend) {
-            socket.emit(EVENTS.SUCCESS, { message: "Friend is not online message saved in database" });
-            return;
-        }
-        socket.to(addresstoSend.socketId).emit(EVENTS.RECEIVEMESSAGE, message);
-        socket.emit(EVENTS.SUCCESS, { message: `Message send to your ID : ${friendId} successfully` })
+        socket.to(conversationId).emit(EVENTS.RECEIVEMESSAGE, message);
+        socket.emit(EVENTS.SUCCESS, { message: `Message send to your ID : ${conversationId} successfully` })
         logger.info("Message Sent successfully");
     } catch (error) {
         socket.emit(EVENTS.ERROR, { message: error.message });
@@ -38,15 +35,18 @@ const sendMessage = async (socket, payload) => {
 // Only for group Chat
 const handleJoinRoom = async (socket, payload) => {
     try {
-        const convo = await Conversation.findById(payload.conversationId);
+        payload = JSON.parse(payload);
+        const { conversationId, username } = payload;
+        console.log(conversationId);
+        const convo = await Conversation.findById(conversationId);
         if (!convo) {
-            socket.emit("error", { error: `${payload.conversationId} is not a valid Conversation ID` });
+            socket.emit(EVENTS.ERROR, { message: `${conversationId} is not a valid Conversation ID` });
             logger.error("No conversation found while joining Room");
             return;
         }
-        socket.join(payload.conversationId);
-        socket.emit(EVENTS.SUCCESS, { message: `${payload.username} joined the room` });
-        logger.info(`${payload.username} joined the room`)
+        socket.join(conversationId);
+        socket.emit(EVENTS.SUCCESS, { message: `${username} joined the room` });
+        logger.info(`${username} joined the room`)
 
     } catch (error) {
         socket.emit(EVENTS.ERROR, { message: error.message });
@@ -98,7 +98,7 @@ const setupSocketHandlers = (io) => {
     io.on("connection", (socket) => {
         handleNewConnection(socket, io);
         socket.on("sendMessage", (payload) => sendMessage(socket, payload));
-        // socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
+        socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
         socket.on("disconnect", () => handleDisconnect(socket));
     });
 };

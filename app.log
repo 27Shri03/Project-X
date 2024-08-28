@@ -52,3 +52,69 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"79.454\"}","timestamp":"2024-08-28T18:47:17.589Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"75.681\"}","timestamp":"2024-08-28T18:47:26.797Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"73.139\"}","timestamp":"2024-08-28T18:49:17.423Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"431.295\"}","timestamp":"2024-08-28T18:49:40.914Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"92.520\"}","timestamp":"2024-08-28T18:51:27.661Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"71.098\"}","timestamp":"2024-08-28T18:51:39.594Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"404\",\"responseTime\":\"9.050\"}","timestamp":"2024-08-28T18:52:31.212Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"97.422\"}","timestamp":"2024-08-28T18:52:38.076Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T18:58:12.478Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-28T18:59:23.974Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/chat/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"0.902\"}","timestamp":"2024-08-28T18:59:57.055Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-28T19:00:10.789Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"45.856\"}","timestamp":"2024-08-28T19:00:10.791Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"acceptedFriendRequest sent successfully to Shri123","timestamp":"2024-08-28T19:00:57.992Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"73.752\"}","timestamp":"2024-08-28T19:00:57.993Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"106.848\"}","timestamp":"2024-08-28T19:12:12.726Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:12:41.795Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-28T19:12:43.662Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:13:19.348Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:14:22.509Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:14:24.234Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:14:53.178Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:14:54.685Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:14:55.857Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:18:42.798Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:20:05.293Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:20:06.949Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:20:16.028Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:20:17.477Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:24:07.492Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:24:09.531Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:24:45.634Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:24:45.685Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:30:19.594Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:31:09.977Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:33:53.719Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:37:56.975Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:37:58.348Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:39:01.518Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:40:27.047Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:40:27.981Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:42:38.665Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:42:39.625Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:43:20.114Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:43:27.746Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:43:55.821Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:45:12.204Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:45:37.622Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:45:51.796Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:46:02.412Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:47:39.151Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:48:40.237Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:49:29.822Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:49:30.995Z"}
+{"level":"\u001b[33mwarn\u001b[39m","message":"Wrong conversation Id in sendMessage","timestamp":"2024-08-28T19:51:30.756Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:52:05.358Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:52:06.587Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:53:28.666Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:53:30.179Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the room","timestamp":"2024-08-28T19:53:58.093Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-28T19:54:03.337Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the room","timestamp":"2024-08-28T19:54:20.344Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"undefined joined the room","timestamp":"2024-08-28T19:55:00.062Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the room","timestamp":"2024-08-28T19:55:19.490Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:55:33.364Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:56:04.156Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:56:13.667Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:56:21.763Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-28T19:56:21.768Z"}

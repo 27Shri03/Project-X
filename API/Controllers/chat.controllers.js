@@ -11,11 +11,7 @@ export const getMessages = async (req, res) => {
         });
 
         if (!conversation) {
-            conversation = new Conversation({
-                participants: [userId, friendId],
-                messages: [],
-            })
-            await conversation.save();
+            res.status(404).json({ message: "Conversation not found please make the User friend first" });
         }
         const totalMessages = conversation.messages.length;
         const messages = conversation.messages
