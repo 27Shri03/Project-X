@@ -73,7 +73,7 @@ This listener is used during development to catch any successful operations. You
 
 ```json
 {
-    message : "Your success message is here for the requests"
+    "message" : "Your success message is here for the requests"
 }
 ```
 ### 2. Error 
@@ -83,7 +83,7 @@ This listener is used during development to catch any errors that occur during t
 
 ```json
 {
-    message : "Your error message is here for the requests"
+    "message" : "Your error message is here for the requests"
 }
 
 ```
