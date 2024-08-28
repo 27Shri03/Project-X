@@ -2,7 +2,7 @@
 
 ## Overview
 
-This documentation covers the 6 Socket.IO events used in the system, consisting of 1 emitters and 5 listeners.
+This documentation covers the 7 Socket.IO events used in the system, consisting of 2 emitters and 5 listeners.
 
 ### Connection with Server
 
@@ -20,9 +20,26 @@ There are 2 query params which are need to be passed in order to connect:
 
 ## Emitters
 
-### 1. sendMessage
+### 1. joinRoom
 
-**Event Name** : "sendMessage"
+This event will be emitted before using the sendMessage Emitter in order to join a common room:
+
+Json body:
+
+```json
+{
+    "conversationId" : "66c5c604761bba1d607bc6e2",
+    "username" : "Shri123"
+}
+```
+#### Body Explanation
+
+| Field     | Description                                                      |
+|-----------|------------------------------------------------------------------|
+| `conversationId`  | Room ID associated with your friend
+| `username`  | Your username  |
+
+### 2. sendMessage
 
 This event is used to sendMessage to another user on a one-one chat:
 
@@ -30,7 +47,7 @@ Json body:
 
 ```json
 {
-    "friendId" : "66c5c604761bba1d607bc6e2",
+    "conversationId" : "66c5c604761bba1d607bc6e2",
     "message" : {
         "senderId" : "66c5c59a761bba1d607bc6de",
         "contentType" : "text",
@@ -42,7 +59,7 @@ Json body:
 
 | Field     | Description                                                      |
 |-----------|------------------------------------------------------------------|
-| `friendId`  | ID of your friend to whom you want to send the message        |
+| `conversationId`  | Room ID associated with your friend        |
 | `message`  | Details of the message  |
 
 
