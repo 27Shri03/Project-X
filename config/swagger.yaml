@@ -207,6 +207,16 @@ paths:
                     type: boolean
                   conversationId:
                     type: string
+        "404": 
+          description: Conversation not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Conversation not found please make the user your friend first then try again"
         "500":
           description: Internal server error
           content:
