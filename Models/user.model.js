@@ -19,12 +19,16 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: null
     },
-    friends: [
-        {
+    friends: [{
+        user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
+        },
+        conversationId: {
+            type: String,
+            required: [true, "conversation ID is required"]
         }
-    ],
+    }],
     groupChat: [],
     friendRequests: [{
         user: {

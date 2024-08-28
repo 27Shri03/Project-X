@@ -58,7 +58,7 @@ export const logIn = async (req, res) => {
         }
         const query = email ? { email: email } : { username: username };
         const oldUser = await User.findOne(query)
-            .populate('friends', 'username photo _id')
+            .populate('friends.user', 'username photo _id')
             .populate('friendRequests.user', 'username photo');
         if (!oldUser) {
             return res.status(404).json({ message: "User not found please signUp first" });
@@ -70,10 +70,12 @@ export const logIn = async (req, res) => {
         const userData = {
             username: oldUser.username,
             userId: oldUser._id,
+            photo: oldUser.photo,
             friends: oldUser.friends.map((friend) => ({
-                username: friend.username,
-                photo: friend.photo,
-                UID: friend._id
+                username: friend.user.username,
+                photo: friend.user.photo,
+                UID: friend.user._id,
+                conversationId: friend.conversationId
             })),
             friendRequests: oldUser.friendRequests.map(request => ({
                 user: {

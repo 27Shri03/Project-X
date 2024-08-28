@@ -44,3 +44,11 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"304\",\"responseTime\":\"0.609\"}","timestamp":"2024-08-25T18:23:51.309Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"401\",\"responseTime\":\"1.243\"}","timestamp":"2024-08-25T18:24:04.459Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"200\",\"responseTime\":\"2486.238\"}","timestamp":"2024-08-25T18:25:02.052Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"3.586\"}","timestamp":"2024-08-28T18:46:15.843Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.575\"}","timestamp":"2024-08-28T18:46:15.872Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"200\",\"responseTime\":\"8.870\"}","timestamp":"2024-08-28T18:46:15.880Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"200\",\"responseTime\":\"7.234\"}","timestamp":"2024-08-28T18:46:15.882Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"200\",\"responseTime\":\"8.544\"}","timestamp":"2024-08-28T18:46:15.888Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"79.454\"}","timestamp":"2024-08-28T18:47:17.589Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"75.681\"}","timestamp":"2024-08-28T18:47:26.797Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"73.139\"}","timestamp":"2024-08-28T18:49:17.423Z"}

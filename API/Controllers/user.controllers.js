@@ -1,4 +1,5 @@
 import { User } from "../../Models/user.model.js";
+import { Conversation } from "../../Models/conversation.model.js";
 import { emitToUser } from "../../Socket/socketHandler.js";
 import { EVENTS } from "../../constants/contants.js";
 import { uploadFile } from "../../utils/uploadFile.js";
@@ -58,9 +59,13 @@ export const acceptFriendRequest = async (req, res) => {
         if (!otherUser) {
             return res.status(404).json({ message: "Friend User not found" });
         }
-        otherUser.friends.push(myinfo._id);
-        myinfo.friends.push(otherUser._id);
-
+        const conversation = new Conversation({
+            participants: [myinfo._id, otherUser._id],
+            messages: [],
+        })
+        await conversation.save();
+        otherUser.friends.push({ user: myinfo._id, conversationId: conversation._id });
+        myinfo.friends.push({ user: otherUser._id, conversationId: conversation._id });
         // filtering the friendRequests as is is now accepted
         myinfo.friendRequests = myinfo.friendRequests.filter(
             request => request.user.username !== username
@@ -69,7 +74,8 @@ export const acceptFriendRequest = async (req, res) => {
         const payload = {
             username: myinfo.username,
             photo: myinfo.photo,
-            UID: myinfo._id
+            UID: myinfo._id,
+            conversationId: conversation._id
         }
         emitToUser(otherUser._id.toString(), EVENTS.ACCEPTEDFRIENDREQUEST, payload);
         return res.status(200).json({ message: "Friend Request accepted Successfully" });
