@@ -1,156 +1,29 @@
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs\",\"status\":\"301\",\"responseTime\":\"3.434\"}","timestamp":"2024-08-25T17:19:40.757Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.993\"}","timestamp":"2024-08-25T17:19:40.765Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.350\"}","timestamp":"2024-08-25T17:19:40.801Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"4.046\"}","timestamp":"2024-08-25T17:19:40.803Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"4.659\"}","timestamp":"2024-08-25T17:19:40.804Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"4.788\"}","timestamp":"2024-08-25T17:19:40.805Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"90.840\"}","timestamp":"2024-08-25T17:20:08.427Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"66c5c604761bba1d607bc6e2 not found for event receiveFriendRequest","timestamp":"2024-08-25T17:20:27.583Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"40.758\"}","timestamp":"2024-08-25T17:20:27.585Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"88.352\"}","timestamp":"2024-08-25T17:21:23.014Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/acceptFriendRequest\",\"status\":\"404\",\"responseTime\":\"22.196\"}","timestamp":"2024-08-25T17:21:55.875Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"66c5c59a761bba1d607bc6de not found for event acceptedFriendRequest","timestamp":"2024-08-25T17:22:01.451Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"72.123\"}","timestamp":"2024-08-25T17:22:01.452Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"5.885\"}","timestamp":"2024-08-25T17:30:49.096Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"1.633\"}","timestamp":"2024-08-25T17:30:49.127Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"304\",\"responseTime\":\"0.352\"}","timestamp":"2024-08-25T17:30:49.131Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"2.688\"}","timestamp":"2024-08-25T17:30:49.132Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"2.799\"}","timestamp":"2024-08-25T17:30:49.133Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"102.968\"}","timestamp":"2024-08-25T17:31:18.225Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"500\",\"responseTime\":\"6.996\"}","timestamp":"2024-08-25T18:07:31.051Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"500\",\"responseTime\":\"2.708\"}","timestamp":"2024-08-25T18:08:32.795Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"500\",\"responseTime\":\"10.840\"}","timestamp":"2024-08-25T18:09:49.918Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"200\",\"responseTime\":\"3483.374\"}","timestamp":"2024-08-25T18:11:52.358Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"200\",\"responseTime\":\"3320.527\"}","timestamp":"2024-08-25T18:13:23.415Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.969\"}","timestamp":"2024-08-25T18:21:17.418Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"1.593\"}","timestamp":"2024-08-25T18:21:17.439Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"2.102\"}","timestamp":"2024-08-25T18:21:17.453Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"2.408\"}","timestamp":"2024-08-25T18:21:17.455Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.649\"}","timestamp":"2024-08-25T18:21:17.457Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.996\"}","timestamp":"2024-08-25T18:22:39.417Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.464\"}","timestamp":"2024-08-25T18:22:39.440Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"4.366\"}","timestamp":"2024-08-25T18:22:39.442Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"4.364\"}","timestamp":"2024-08-25T18:22:39.442Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"4.776\"}","timestamp":"2024-08-25T18:22:39.443Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"304\",\"responseTime\":\"1.071\"}","timestamp":"2024-08-25T18:22:39.571Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"401\",\"responseTime\":\"0.696\"}","timestamp":"2024-08-25T18:22:57.359Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"401\",\"responseTime\":\"0.423\"}","timestamp":"2024-08-25T18:23:17.519Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"401\",\"responseTime\":\"0.400\"}","timestamp":"2024-08-25T18:23:25.297Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"3.135\"}","timestamp":"2024-08-25T18:23:51.194Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.436\"}","timestamp":"2024-08-25T18:23:51.216Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"4.577\"}","timestamp":"2024-08-25T18:23:51.219Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"4.556\"}","timestamp":"2024-08-25T18:23:51.220Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"3.196\"}","timestamp":"2024-08-25T18:23:51.221Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"304\",\"responseTime\":\"0.609\"}","timestamp":"2024-08-25T18:23:51.309Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"401\",\"responseTime\":\"1.243\"}","timestamp":"2024-08-25T18:24:04.459Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/uploadProfilePhoto\",\"status\":\"200\",\"responseTime\":\"2486.238\"}","timestamp":"2024-08-25T18:25:02.052Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"3.586\"}","timestamp":"2024-08-28T18:46:15.843Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.575\"}","timestamp":"2024-08-28T18:46:15.872Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"200\",\"responseTime\":\"8.870\"}","timestamp":"2024-08-28T18:46:15.880Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"200\",\"responseTime\":\"7.234\"}","timestamp":"2024-08-28T18:46:15.882Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"200\",\"responseTime\":\"8.544\"}","timestamp":"2024-08-28T18:46:15.888Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"79.454\"}","timestamp":"2024-08-28T18:47:17.589Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"75.681\"}","timestamp":"2024-08-28T18:47:26.797Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"73.139\"}","timestamp":"2024-08-28T18:49:17.423Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"500\",\"responseTime\":\"431.295\"}","timestamp":"2024-08-28T18:49:40.914Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"92.520\"}","timestamp":"2024-08-28T18:51:27.661Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"71.098\"}","timestamp":"2024-08-28T18:51:39.594Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"404\",\"responseTime\":\"9.050\"}","timestamp":"2024-08-28T18:52:31.212Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"97.422\"}","timestamp":"2024-08-28T18:52:38.076Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T18:58:12.478Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-28T18:59:23.974Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/chat/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"0.902\"}","timestamp":"2024-08-28T18:59:57.055Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-28T19:00:10.789Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"45.856\"}","timestamp":"2024-08-28T19:00:10.791Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"acceptedFriendRequest sent successfully to Shri123","timestamp":"2024-08-28T19:00:57.992Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"73.752\"}","timestamp":"2024-08-28T19:00:57.993Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"106.848\"}","timestamp":"2024-08-28T19:12:12.726Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:12:41.795Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-28T19:12:43.662Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:13:19.348Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:14:22.509Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:14:24.234Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:14:53.178Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:14:54.685Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:14:55.857Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:18:42.798Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:20:05.293Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:20:06.949Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:20:16.028Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:20:17.477Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:24:07.492Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:24:09.531Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:24:45.634Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:24:45.685Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:30:19.594Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:31:09.977Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:33:53.719Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:37:56.975Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:37:58.348Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:39:01.518Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:40:27.047Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:40:27.981Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:42:38.665Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:42:39.625Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:43:20.114Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:43:27.746Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:43:55.821Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:45:12.204Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:45:37.622Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:45:51.796Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:46:02.412Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:47:39.151Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:48:40.237Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:49:29.822Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:49:30.995Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"Wrong conversation Id in sendMessage","timestamp":"2024-08-28T19:51:30.756Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:52:05.358Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"message and conversationId required in payload","timestamp":"2024-08-28T19:52:06.587Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-28T19:53:28.666Z"}
-{"level":"\u001b[31merror\u001b[39m","message":"No conversation found while joining Room","timestamp":"2024-08-28T19:53:30.179Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the room","timestamp":"2024-08-28T19:53:58.093Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-28T19:54:03.337Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the room","timestamp":"2024-08-28T19:54:20.344Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"undefined joined the room","timestamp":"2024-08-28T19:55:00.062Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the room","timestamp":"2024-08-28T19:55:19.490Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:55:33.364Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:56:04.156Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Message Sent successfully","timestamp":"2024-08-28T19:56:13.667Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-28T19:56:21.763Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-28T19:56:21.768Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.937\"}","timestamp":"2024-08-28T20:03:46.905Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"2.265\"}","timestamp":"2024-08-28T20:03:46.925Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"2.289\"}","timestamp":"2024-08-28T20:03:46.926Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.344\"}","timestamp":"2024-08-28T20:03:46.927Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"4.031\"}","timestamp":"2024-08-28T20:03:46.928Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"200\",\"responseTime\":\"2.371\"}","timestamp":"2024-08-28T20:03:47.142Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.946\"}","timestamp":"2024-08-28T20:05:03.128Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.402\"}","timestamp":"2024-08-28T20:05:03.147Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"3.939\"}","timestamp":"2024-08-28T20:05:03.150Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"2.463\"}","timestamp":"2024-08-28T20:05:03.151Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"2.613\"}","timestamp":"2024-08-28T20:05:03.151Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"304\",\"responseTime\":\"0.784\"}","timestamp":"2024-08-28T20:05:03.263Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"66cf71f68df93791d9cf476a not found for event receiveFriendRequest","timestamp":"2024-08-29T09:15:23.829Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"46.436\"}","timestamp":"2024-08-29T09:15:23.834Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"10.965\"}","timestamp":"2024-08-29T09:16:31.977Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"82.775\"}","timestamp":"2024-08-29T09:18:39.011Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"66cf71f68df93791d9cf476a not found for event receiveFriendRequest","timestamp":"2024-08-29T09:19:09.603Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"45.313\"}","timestamp":"2024-08-29T09:19:09.604Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"66cf71f68df93791d9cf476a not found for event receiveFriendRequest","timestamp":"2024-08-29T09:22:06.000Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"58.945\"}","timestamp":"2024-08-29T09:22:06.007Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"404\",\"responseTime\":\"23.627\"}","timestamp":"2024-08-29T09:23:23.217Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.305\"}","timestamp":"2024-08-29T09:23:55.940Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"304\",\"responseTime\":\"0.346\"}","timestamp":"2024-08-29T09:23:55.966Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"4.829\"}","timestamp":"2024-08-29T09:23:55.968Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"3.967\"}","timestamp":"2024-08-29T09:23:55.969Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"4.232\"}","timestamp":"2024-08-29T09:23:55.970Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/signUp\",\"status\":\"201\",\"responseTime\":\"96.848\"}","timestamp":"2024-08-29T09:24:19.208Z"}
-{"level":"\u001b[33mwarn\u001b[39m","message":"66cf71af8df93791d9cf4765 not found for event receiveFriendRequest","timestamp":"2024-08-29T09:24:53.790Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"67.581\"}","timestamp":"2024-08-29T09:24:53.791Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/rejectFriendRequest\",\"status\":\"200\",\"responseTime\":\"32.434\"}","timestamp":"2024-08-29T09:27:24.023Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"2.635\"}","timestamp":"2024-08-29T09:49:56.377Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"1.364\"}","timestamp":"2024-08-29T09:49:56.390Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.303\"}","timestamp":"2024-08-29T09:49:56.393Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"2.082\"}","timestamp":"2024-08-29T09:49:56.393Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"2.342\"}","timestamp":"2024-08-29T09:49:56.394Z"}
-{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"304\",\"responseTime\":\"1.157\"}","timestamp":"2024-08-29T09:49:56.584Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:30:08.553Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:30:15.227Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Online emitted","timestamp":"2024-08-29T17:31:26.344Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:31:26.347Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Online emitted","timestamp":"2024-08-29T17:31:29.756Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:31:29.756Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:31:53.202Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:32:11.522Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:35:28.744Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:35:30.966Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:37:08.975Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:37:15.248Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:39:08.095Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:39:26.556Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:42:44.081Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:42:46.248Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:52:51.631Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:53:48.732Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:53:51.455Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T17:54:16.117Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T17:54:18.700Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-29T17:54:28.856Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-29T17:54:32.116Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T18:00:01.527Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T18:00:03.373Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif disconnected","timestamp":"2024-08-29T18:00:21.107Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T18:00:57.735Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T18:00:59.331Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-29T18:01:04.141Z"}

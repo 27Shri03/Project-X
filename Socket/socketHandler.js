@@ -2,8 +2,15 @@ import { io } from "../server.js";
 import logger from "../config/winston.config.js";
 import { EVENTS } from "../constants/contants.js";
 import { Conversation } from "../Models/conversation.model.js";
+import { User } from "../Models/user.model.js";
+import { batchEmitToFriends } from "../utils/batchEmission.js";
 
 const connectedSockets = new Map();
+
+const handleIsTyping = (socket, payload) => {
+    payload = JSON.parse(payload);
+    socket.to(payload.conversationId).emit(EVENTS.FRIENDTYPING, payload.typing);
+}
 
 const sendMessage = async (socket, payload) => {
     try {
@@ -54,7 +61,7 @@ const handleJoinRoom = async (socket, payload) => {
     }
 }
 
-const handleNewConnection = (socket) => {
+const handleNewConnection = async (socket) => {
     try {
         const userId = socket.handshake.query.userId;
         const username = socket.handshake.query.username;
@@ -62,6 +69,8 @@ const handleNewConnection = (socket) => {
             socketId: socket.id,
             username: username
         });
+        const user = await User.findById(userId);
+        batchEmitToFriends(user.friends, EVENTS.FRIENDSTATUS, { userId, username, online: true });
         logger.info(`${username} joined the socket!`);
         socket.emit(EVENTS.SUCCESS, { message: `${username} is connected to sockets` });
     } catch (error) {
@@ -70,11 +79,14 @@ const handleNewConnection = (socket) => {
     }
 };
 
-const handleDisconnect = (socket) => {
+const handleDisconnect = async (socket) => {
     try {
         const socketTodelete = [...connectedSockets.entries()].find(([key, value]) => value.socketId === socket.id)?.[0];
+
         if (socketTodelete) {
             const userInfo = connectedSockets.get(socketTodelete);
+            const user = await User.findById(socketTodelete);
+            batchEmitToFriends(user.friends, EVENTS.FRIENDSTATUS, { userId: socketTodelete, username: userInfo.username, online: false });
             connectedSockets.delete(socketTodelete);
             logger.info(`${userInfo.username} disconnected`);
         }
@@ -99,7 +111,9 @@ const setupSocketHandlers = (io) => {
         handleNewConnection(socket, io);
         socket.on("sendMessage", (payload) => sendMessage(socket, payload));
         socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
+        socket.on("iamTyping", (payload) => handleIsTyping(socket, payload));
         socket.on("disconnect", () => handleDisconnect(socket));
     });
 };
+
 export { setupSocketHandlers, connectedSockets, emitToUser };
