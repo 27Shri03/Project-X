@@ -111,7 +111,7 @@ const setupSocketHandlers = (io) => {
         handleNewConnection(socket, io);
         socket.on("sendMessage", (payload) => sendMessage(socket, payload));
         socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
-        socket.on("iamTyping", (payload) => handleIsTyping(socket, payload));
+        socket.on("userTyping", (payload) => handleIsTyping(socket, payload));
         socket.on("disconnect", () => handleDisconnect(socket));
     });
 };
