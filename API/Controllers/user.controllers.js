@@ -19,7 +19,7 @@ export const sendFriendRequest = async (req, res) => {
         if (receiverUser.friendRequests.some((request) => request.user.toString() === userId)) { // if you already have send the friendRequest
             return res.status(404).json({ message: `You already have send this request to ${username} ` });
         }
-        if (receiverUser.friends.includes(userId)) { // if user is already your friend
+        if (receiverUser.friends.find((friend) => friend.user.toString() === userId)) { // if user is already your friend
             return res.status(404).json({ message: `${username} is already your friend` });
         }
         receiverUser.friendRequests.push({ user: userId });
@@ -107,5 +107,26 @@ export const uploadProfilePhoto = async (req, res) => {
             message: "Internal server error",
             error: error.message
         })
+    }
+}
+
+export const rejectFriendRequest = async (req, res) => {
+    const { username } = req.body;
+    const { userId } = req.user;
+    try {
+        if (!username) { // username not found
+            return res.status(404).json({ message: "Username is required " })
+        }
+        const myinfo = await User.findById(userId).populate('friendRequests.user', 'username');
+        if (!myinfo.friendRequests.find((friend) => friend.user.username === username)) {
+            return res.status(404).json({ message: "Friend Request not found" })
+        }
+        myinfo.friendRequests = myinfo.friendRequests.filter(
+            request => request.user.username !== username
+        );
+        myinfo.save();
+        return res.json({ message: "Friend Request rejected successfully" });
+    } catch (error) {
+        return res.status(500).json({ message: "Internal Server Error", error: error.message });
     }
 }

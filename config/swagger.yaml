@@ -321,6 +321,47 @@ paths:
         "500":
           description: Internal server error
 
+  /user/rejectFriendRequest:
+    post:
+      summary: Reject Friend Request
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+              properties:
+                username:
+                  type: string
+                  description: Username of the person whose request to reject
+      responses:
+        "200":
+          description: Friend request reject successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Friend Request accepted Successfully"
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "username not found in database"
+        "500":
+          description: Internal server error
+
   /user/uploadProfilePhoto:
     post:
       summary: Upload user profile photo
