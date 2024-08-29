@@ -2,7 +2,7 @@
 
 ## Overview
 
-This documentation covers the 7 Socket.IO events used in the system, consisting of 2 emitters and 5 listeners.
+This documentation covers the 10 Socket.IO events used in the system, consisting of 3 emitters and 7 listeners.
 
 ### Connection with Server
 
@@ -62,7 +62,24 @@ Json body:
 | `conversationId`  | Room ID associated with your friend        |
 | `message`  | Details of the message  |
 
+### 3. userTyping
 
+This event will be emitted when user start and end typing. Make sure to toggle the typing field to **true** or **false**:
+
+Json body:
+
+```json
+{
+    "conversationId" : "66c5c604761bba1d607bc6e2",
+    "typing" : true
+}
+```
+#### Body Explanation
+
+| Field     | Description                                                      |
+|-----------|------------------------------------------------------------------|
+| `conversationId`  | Room ID associated with your friend
+| `typing`  | True or false depends on start or end typing  |
 
 ## Listeners
 
@@ -127,6 +144,33 @@ When your friend accepts your friend request then you will recieve your friend d
     "UID": "66c5c604761bba1d607bc6e2"
 }
 ```
+
+### 6. User Typing
+
+**Event Name** : "userTyping"
+
+Receive realtime updates whether your friend is typing or not.
+
+```json
+{
+    "typing": true,
+}
+```
+
+### 7. Friend Status
+
+**EVENT NAME** : "friendStatus"
+
+Receive realtime updates whether your friend is online or not.
+
+```json
+{
+    "userId" : "6646j2k6l2424523aa",
+    "username" : "jimkahlon",
+    "online" : true 
+}
+```
+
 
 
 
