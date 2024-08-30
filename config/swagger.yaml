@@ -320,7 +320,7 @@ paths:
           description: Internal server error
 
   /user/rejectFriendRequest:
-    post:
+    delete:
       summary: Reject Friend Request
       tags:
         - User
@@ -361,7 +361,7 @@ paths:
           description: Internal server error
 
   /user/uploadProfilePhoto:
-    post:
+    put:
       summary: Upload user profile photo
       tags:
         - User

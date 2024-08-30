@@ -7,8 +7,8 @@ import { upload } from "../Middlewares/multer.middleware.js";
 const Router = express.Router();
 
 Router.post("/sendFriendRequest", authMiddleware, sendFriendRequest);
-Router.post("/rejectFriendRequest", authMiddleware, rejectFriendRequest);
+Router.delete("/rejectFriendRequest", authMiddleware, rejectFriendRequest);
 Router.post("/acceptFriendRequest", authMiddleware, acceptFriendRequest);
-Router.post('/uploadProfilePhoto', authMiddleware, upload.single('image'), uploadProfilePhoto)
+Router.put('/uploadProfilePhoto', authMiddleware, upload.single('image'), uploadProfilePhoto)
 
 export default Router;
