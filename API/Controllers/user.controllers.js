@@ -111,7 +111,7 @@ export const uploadProfilePhoto = async (req, res) => {
 }
 
 export const rejectFriendRequest = async (req, res) => {
-    const { username } = req.body;
+    const { username } = req.params;
     const { userId } = req.user;
     try {
         if (!username) { // username not found

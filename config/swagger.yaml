@@ -205,7 +205,7 @@ paths:
                     type: integer
                   hasMore:
                     type: boolean
-        "404": 
+        "404":
           description: Conversation not found
           content:
             application/json:
@@ -319,26 +319,21 @@ paths:
         "500":
           description: Internal server error
 
-  /user/rejectFriendRequest:
+  /user/rejectFriendRequest/{username}:
     delete:
       summary: Reject Friend Request
       tags:
         - User
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required:
-                - username
-              properties:
-                username:
-                  type: string
-                  description: Username of the person whose request to reject
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          description: Username of the person whose request to reject
       responses:
         "200":
-          description: Friend request reject successfully
+          description: Friend request rejected successfully
           content:
             application/json:
               schema:
@@ -346,7 +341,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: "Friend Request accepted Successfully"
+                    example: "Friend Request rejected successfully"
         "404":
           description: User not found
           content:
@@ -356,9 +351,17 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: "username not found in database"
+                    example: "Username not found in database"
         "500":
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Internal server error occurred"
 
   /user/uploadProfilePhoto:
     put:
