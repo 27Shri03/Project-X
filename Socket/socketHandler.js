@@ -8,8 +8,14 @@ import { batchEmitToFriends } from "../utils/batchEmission.js";
 const connectedSockets = new Map();
 
 const handleIsTyping = (socket, payload) => {
-    payload = JSON.parse(payload);
-    socket.to(payload.conversationId).emit(EVENTS.FRIENDTYPING, payload.typing);
+    try {
+        payload = JSON.parse(payload);
+        socket.to(payload.conversationId).emit(EVENTS.FRIENDTYPING, payload.typing);
+
+    } catch (error) {
+        logger.error(`Error in handleisTyping : ${error.message}`);
+        socket.emit(EVENTS.ERROR, { message: error.message });
+    }
 }
 
 const sendMessage = async (socket, payload) => {
@@ -31,11 +37,11 @@ const sendMessage = async (socket, payload) => {
         convo.messages.push(message);
         await convo.save();
         socket.to(conversationId).emit(EVENTS.RECEIVEMESSAGE, message);
-        socket.emit(EVENTS.SUCCESS, { message: `Message send to your ID : ${conversationId} successfully` })
+        socket.emit(EVENTS.SUCCESS, { message: `Message send to your ID : ${conversationId} successfully` });
         logger.info("Message Sent successfully");
     } catch (error) {
         socket.emit(EVENTS.ERROR, { message: error.message });
-        logger.error("Error in SendMessage : ", error.message);
+        logger.error(`Error in SendMessage : ${error.message}`);
     }
 }
 
@@ -75,7 +81,7 @@ const handleNewConnection = async (socket) => {
         socket.emit(EVENTS.SUCCESS, { message: `${username} is connected to sockets` });
     } catch (error) {
         socket.emit(EVENTS.ERROR, { message: error.message });
-        logger.error("Error in Socket Disconnection : ", error.message);
+        logger.error(`Error in Socket Connection : ${error.message}`);
     }
 };
 

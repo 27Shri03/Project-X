@@ -24,10 +24,11 @@ export const sendFriendRequest = async (req, res) => {
         }
         receiverUser.friendRequests.push({ user: userId });
         await receiverUser.save();
+        const myinfo = await User.findById(userId);
         const payload = {
             user: {
                 username: req.user.username,
-                photo: null
+                photo: myinfo.photo || null
             },
             createdAt: receiverUser.updatedAt
         }
@@ -36,7 +37,6 @@ export const sendFriendRequest = async (req, res) => {
 
     } catch (error) {
         return res.status(500).json({ message: "Internal Server Error", error: error.message });
-
     }
 }
 

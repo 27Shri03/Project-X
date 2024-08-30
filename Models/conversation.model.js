@@ -12,7 +12,7 @@ const conversationSchema = new mongoose.Schema({
         },
         contentType: {
             type: String,
-            enum: ['text', 'image', 'video']
+            enum: ['text', 'image', 'video' , 'voice']
         },
         contentLink: {
             type: String,

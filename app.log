@@ -27,3 +27,16 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-29T18:00:57.735Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-29T18:00:59.331Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-29T18:01:04.141Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-30T14:46:43.095Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-30T14:46:49.920Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-30T14:46:52.561Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-08-30T14:47:00.666Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-08-30T14:47:06.619Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"aasif joined the socket!","timestamp":"2024-08-30T14:48:15.866Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"200\",\"responseTime\":\"3.763\"}","timestamp":"2024-08-30T14:49:49.188Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.537\"}","timestamp":"2024-08-30T14:49:49.239Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"200\",\"responseTime\":\"11.774\"}","timestamp":"2024-08-30T14:49:49.248Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"200\",\"responseTime\":\"8.872\"}","timestamp":"2024-08-30T14:49:49.252Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"200\",\"responseTime\":\"9.959\"}","timestamp":"2024-08-30T14:49:49.261Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-30T15:32:16.318Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"46.975\"}","timestamp":"2024-08-30T15:32:16.319Z"}
