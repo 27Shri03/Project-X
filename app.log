@@ -40,3 +40,19 @@
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"200\",\"responseTime\":\"9.959\"}","timestamp":"2024-08-30T14:49:49.261Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"receiveFriendRequest sent successfully to aasif","timestamp":"2024-08-30T15:32:16.318Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/sendFriendRequest\",\"status\":\"200\",\"responseTime\":\"46.975\"}","timestamp":"2024-08-30T15:32:16.319Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"4.019\"}","timestamp":"2024-08-30T16:32:36.782Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"2.932\"}","timestamp":"2024-08-30T16:32:36.809Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"3.115\"}","timestamp":"2024-08-30T16:32:36.810Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"304\",\"responseTime\":\"0.232\"}","timestamp":"2024-08-30T16:32:36.812Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"4.901\"}","timestamp":"2024-08-30T16:32:36.813Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/chat/getMessages?limit=20&page=1&friendId=66cf73e98df93791d9cf4773\",\"status\":\"500\",\"responseTime\":\"18.601\"}","timestamp":"2024-08-30T16:33:33.195Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/auth/logIn\",\"status\":\"200\",\"responseTime\":\"100.787\"}","timestamp":"2024-08-30T16:34:26.137Z"}
+{"level":"\u001b[33mwarn\u001b[39m","message":"66cf71af8df93791d9cf4765 not found for event acceptedFriendRequest","timestamp":"2024-08-30T16:34:46.944Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/user/acceptFriendRequest\",\"status\":\"200\",\"responseTime\":\"81.612\"}","timestamp":"2024-08-30T16:34:46.946Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"304\",\"responseTime\":\"4.631\"}","timestamp":"2024-08-30T16:35:58.761Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"304\",\"responseTime\":\"1.638\"}","timestamp":"2024-08-30T16:35:58.776Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.660\"}","timestamp":"2024-08-30T16:35:58.781Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"304\",\"responseTime\":\"3.161\"}","timestamp":"2024-08-30T16:35:58.782Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"304\",\"responseTime\":\"1.227\"}","timestamp":"2024-08-30T16:35:58.783Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"200\",\"responseTime\":\"2.770\"}","timestamp":"2024-08-30T16:35:59.116Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/chat/getMessages?limit=20&page=1&conversationId=66d1f4a6dc929ba9eb695e89\",\"status\":\"200\",\"responseTime\":\"25.093\"}","timestamp":"2024-08-30T16:37:41.665Z"}

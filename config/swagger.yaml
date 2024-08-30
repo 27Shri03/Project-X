@@ -169,11 +169,11 @@ paths:
           required: true
           description: Page number
         - in: query
-          name: friendId
+          name: conversationId
           schema:
             type: string
           required: true
-          description: ID of the friend/conversation partner
+          description: conversationId with you friend
       responses:
         "200":
           description: Successful response
@@ -205,8 +205,6 @@ paths:
                     type: integer
                   hasMore:
                     type: boolean
-                  conversationId:
-                    type: string
         "404": 
           description: Conversation not found
           content:
