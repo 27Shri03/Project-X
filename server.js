@@ -17,7 +17,7 @@ const io = new Server(server, {
 setupSocketHandlers(io);
 
 // Start the server
-const PORT = process.env.WEBSITES_PORT || 5000;
+const PORT = process.env.WEBSITES_PORT || 8080;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
