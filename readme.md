@@ -36,3 +36,6 @@ API documentation is available via Swagger. Once the server is running, navigate
 ```bash
 https://redchat.azurewebsites.net/api-docs
 ```
+
+## Socket Documentation : 
+Socket documentation is present in docs . For detailed socket documentation, [click here](./docs/socket.md).
