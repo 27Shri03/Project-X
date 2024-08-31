@@ -9,7 +9,7 @@ This documentation covers the 10 Socket.IO events used in the system, consisting
 You can establish a connection with the server using the following URL:
 
 ```
-https://project-x-6666.onrender.com?userId=<your-userId>&username=<your-username>
+https://redchat.azurewebsites.net?userId=<your-userId>&username=<your-username>
 ```
 There are 2 query params which are need to be passed in order to connect:
 | Parameter | Value                      |
