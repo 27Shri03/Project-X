@@ -84,7 +84,6 @@ const handleNewConnection = async (socket) => {
         const userId = socket.handshake.query.userId;
         const username = socket.handshake.query.username;
         const data = connectedSockets.get(userId);
-        console.log(connectedSockets);
         if(data){
             socket.emit(EVENTS.ERROR , {message : "You are already connected to SocketIO"});
             socket.disconnect();
@@ -94,6 +93,7 @@ const handleNewConnection = async (socket) => {
             socketId: socket.id,
             username: username
         });
+        console.log(connectedSockets);
         socket.join(userId);
         const user = await User.findById(userId);
         batchEmitToFriends(user.friends, EVENTS.FRIENDSTATUS, { userId, username, online: true });
