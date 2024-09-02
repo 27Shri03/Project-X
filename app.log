@@ -116,3 +116,7 @@
 {"level":"\u001b[31merror\u001b[39m","message":"Error in leave Room : \"[object Object]\" is not valid JSON","timestamp":"2024-09-02T11:44:34.832Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-09-02T11:47:33.598Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the room","timestamp":"2024-09-02T11:47:38.616Z"}
+{"level":"\u001b[31merror\u001b[39m","message":"Error in Socket Connection : Cannot read properties of null (reading 'friends')","timestamp":"2024-09-02T16:33:22.426Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-09-02T16:34:45.975Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 joined the socket!","timestamp":"2024-09-02T16:35:41.451Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"Shri123 disconnected","timestamp":"2024-09-02T16:35:53.636Z"}

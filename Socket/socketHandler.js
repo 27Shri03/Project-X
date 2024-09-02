@@ -83,6 +83,13 @@ const handleNewConnection = async (socket) => {
     try {
         const userId = socket.handshake.query.userId;
         const username = socket.handshake.query.username;
+        const data = connectedSockets.get(userId);
+        console.log(connectedSockets);
+        if(data){
+            socket.emit(EVENTS.ERROR , {message : "You are already connected to SocketIO"});
+            socket.disconnect();
+            return;
+        }
         connectedSockets.set(userId, {
             socketId: socket.id,
             username: username
