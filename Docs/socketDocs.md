@@ -2,7 +2,7 @@
 
 ## Overview
 
-This documentation covers the 10 Socket.IO events used in the system, consisting of 3 emitters and 7 listeners.
+This documentation covers the 11 Socket.IO events used in the system, consisting of 4 emitters and 7 listeners.
 
 ### Connection with Server
 
@@ -20,9 +20,11 @@ There are 2 query params which are need to be passed in order to connect:
 
 ## Emitters
 
+**Note :** Make sure the payload is in JSON format
+
 ### 1. joinRoom
 
-This event will be emitted before using the sendMessage Emitter in order to join a common room:
+This event will be emitted when a user enters the chatScreen for his/her friend.
 
 Json body:
 
@@ -80,6 +82,23 @@ Json body:
 |-----------|------------------------------------------------------------------|
 | `conversationId`  | Room ID associated with your friend
 | `typing`  | True or false depends on start or end typing  |
+
+
+### 4. leaveRoom
+
+This event should be emitted when a user leaves the chat screen and comes to home screen.
+Json body:
+
+```json
+{
+    "userId" : "66c5c604761bba1d607bc6e2"
+}
+```
+#### Body Explanation
+
+| Field     | Description                                                      |
+|-----------|------------------------------------------------------------------|
+| `userId`  | userId of the user who leaves the room
 
 ## Listeners
 

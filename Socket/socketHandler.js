@@ -9,7 +9,7 @@ const connectedSockets = new Map();
 
 const handleIsTyping = (socket, payload) => {
     try {
-        payload = JSON.parse(payload);
+        // payload = JSON.parse(payload);
         socket.to(payload.conversationId).emit(EVENTS.FRIENDTYPING, payload.typing);
 
     } catch (error) {
@@ -21,7 +21,6 @@ const handleIsTyping = (socket, payload) => {
 const sendMessage = async (socket, payload) => {
     try {
         // payload = JSON.parse(payload);
-        payload = JSON.parse(payload);
         const { message, conversationId } = payload;
         if (!message || !conversationId) {
             socket.emit(EVENTS.ERROR, { message: "message and conversationId required in payload" });
@@ -45,12 +44,11 @@ const sendMessage = async (socket, payload) => {
     }
 }
 
-// Only for group Chat
 const handleJoinRoom = async (socket, payload) => {
     try {
-        payload = JSON.parse(payload);
+        // payload = JSON.parse(payload);
+        // console.log(payload);
         const { conversationId, username } = payload;
-        console.log(conversationId);
         const convo = await Conversation.findById(conversationId);
         if (!convo) {
             socket.emit(EVENTS.ERROR, { message: `${conversationId} is not a valid Conversation ID` });
@@ -63,7 +61,21 @@ const handleJoinRoom = async (socket, payload) => {
 
     } catch (error) {
         socket.emit(EVENTS.ERROR, { message: error.message });
-        logger.error("Error in JoinRoom : ", error.message);
+        logger.error(`Error in JoinRoom : ${error.message}`);
+    }
+}
+
+const handleLeaveRoom = async (socket, payload) => {
+    try {
+        // payload = JSON.parse(payload);
+        if (!payload.userId) {
+            socket.emit(EVENTS.ERROR, { message: "userId is required in payload" });
+        }
+        socket.join(payload.userId);
+        socket.emit(EVENTS.SUCCESS, { message: "Room left successfully" });
+    } catch (error) {
+        logger.error(`Error in leave Room : ${error.message}`);
+        socket.emit(EVENTS.ERROR, { message: error.message });
     }
 }
 
@@ -75,6 +87,7 @@ const handleNewConnection = async (socket) => {
             socketId: socket.id,
             username: username
         });
+        socket.join(userId);
         const user = await User.findById(userId);
         batchEmitToFriends(user.friends, EVENTS.FRIENDSTATUS, { userId, username, online: true });
         logger.info(`${username} joined the socket!`);
@@ -101,6 +114,7 @@ const handleDisconnect = async (socket) => {
     }
 
 }
+
 const emitToUser = (userId, event, payload) => {
     const userInfo = connectedSockets.get(userId);
     if (userInfo) {
@@ -118,6 +132,7 @@ const setupSocketHandlers = (io) => {
         socket.on("sendMessage", (payload) => sendMessage(socket, payload));
         socket.on("joinRoom", (payload) => handleJoinRoom(socket, payload));
         socket.on("userTyping", (payload) => handleIsTyping(socket, payload));
+        socket.on("leaveRoom", (payload) => handleLeaveRoom(socket, payload));
         socket.on("disconnect", () => handleDisconnect(socket));
     });
 };
