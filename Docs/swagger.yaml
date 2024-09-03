@@ -2,11 +2,17 @@ openapi: 3.0.0
 info:
   title: Project-X API documentation
   version: 1.0.0
-  description: Project-X is a robust and seamless communication chat application which utilizes the full potential of socketIO library.
+  description: |
+    Project-X is a robust and seamless communication chat application which utilizes the full potential of the socketIO library.
+
+    For real-time communication features, please refer to our Socket.IO documentation:
+    [Socket Documentation](https://github.com/27Shri03/Red-Chat/blob/main/Docs/socketDocs.md)
+
+    This API documentation covers the RESTful endpoints of our application.
 
 servers:
   - url: https://redchat.azurewebsites.net/api
-  - url: http://localhost:5000/api
+  - url: http://localhost:8080/api
 
 tags:
   - name: Auth
@@ -297,30 +303,30 @@ paths:
                   description: Username of the person whose request to accept
       responses:
         "200":
-            description: Friend request accepted successfully
-            content:
-              application/json:
-                schema:
-                  type: object
-                  properties:
-                    message:
-                      type: string
-                      example: "Friend Request accepted Successfully"
-                    data:
-                      type: object
-                      properties:
-                        username:
-                          type: string
-                          description: Username of the accepted friend
-                        photo:
-                          type: string
-                          description: URL or identifier of the accepted friend's photo
-                        UID:
-                          type: string
-                          description: Unique identifier of the accepted friend
-                        conversationId:
-                          type: string
-                          description: Identifier of the conversation between the users
+          description: Friend request accepted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Friend Request accepted Successfully"
+                  data:
+                    type: object
+                    properties:
+                      username:
+                        type: string
+                        description: Username of the accepted friend
+                      photo:
+                        type: string
+                        description: URL or identifier of the accepted friend's photo
+                      UID:
+                        type: string
+                        description: Unique identifier of the accepted friend
+                      conversationId:
+                        type: string
+                        description: Identifier of the conversation between the users
         "404":
           description: User not found
           content:
