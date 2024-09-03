@@ -38,4 +38,4 @@ https://redchat.azurewebsites.net/api-docs
 ```
 
 ## Socket Documentation : 
-Socket documentation is present in docs . For detailed socket documentation, [click here](./docs/socket.md).
+Socket documentation is present in docs . For detailed socket documentation, [click here](./Docs/socketDocs.md).
