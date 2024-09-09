@@ -160,7 +160,8 @@ When your friend accepts your friend request then you will recieve your friend d
 {
     "username": "aasif",
     "photo": null,
-    "UID": "66c5c604761bba1d607bc6e2"
+    "UID": "66c5c604761bba1d607bc6e2",
+    "conversationId": "66c5c604761bba1d607bc6e2"
 }
 ```
 
