@@ -71,6 +71,10 @@ const handleLeaveRoom = async (socket, payload) => {
         if (!payload.userId) {
             socket.emit(EVENTS.ERROR, { message: "userId is required in payload" });
         }
+        if (!payload.conversationId) {
+            socket.emit(EVENTS.ERROR, { message: "conversationId is required in payload" });
+        }
+        socket.leave(conversationId);
         socket.join(payload.userId);
         socket.emit(EVENTS.SUCCESS, { message: "Room left successfully" });
     } catch (error) {
