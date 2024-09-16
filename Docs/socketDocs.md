@@ -91,7 +91,8 @@ Json body:
 
 ```json
 {
-    "userId" : "66c5c604761bba1d607bc6e2"
+    "userId" : "66c5c604761bba1d607bc6e2",
+    "conversationId" : "78768721b4hjhgkhkhk"
 }
 ```
 #### Body Explanation
@@ -99,6 +100,7 @@ Json body:
 | Field     | Description                                                      |
 |-----------|------------------------------------------------------------------|
 | `userId`  | userId of the user who leaves the room
+| `conversationId` | conversationId of the room you want to leave
 
 ## Listeners
 
